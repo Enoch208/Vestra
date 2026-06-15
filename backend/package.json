@@ -1,0 +1,24 @@
+{
+  "name": "vestra-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "wallet:new": "tsx scripts/new-agent-wallet.ts",
+    "register:testnet": "tsx scripts/register-agent.ts --network testnet",
+    "register:mainnet": "tsx scripts/register-agent.ts --network mainnet",
+    "update:metadata": "tsx scripts/update-agent-metadata.ts --network testnet",
+    "pull": "tsx src/pull.ts",
+    "pull:loop": "tsx src/pull.ts --loop",
+    "test:reputation": "tsx scripts/test-reputation.ts",
+    "test:onboard": "tsx scripts/test-onboard.ts"
+  },
+  "dependencies": {
+    "viem": "^2.50.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
