@@ -1,9 +1,9 @@
 import { parseAbi } from "viem";
 
-export const VESTRA_AGENT_ID = BigInt(361);
+export const VESTRA_AGENT_ID = BigInt(9387);
 
 export const REPUTATION_REGISTRY =
-  "0x8004B663056A597Dffe9eCcC1965A193B7388713" as `0x${string}`;
+  "0x8004BAa17C55a88189AE136b182e5fdA19dE9b63" as `0x${string}`;
 
 export const ZERO_HASH =
   "0x0000000000000000000000000000000000000000000000000000000000000000" as `0x${string}`;

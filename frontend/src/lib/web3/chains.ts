@@ -1,8 +1,8 @@
 import { defineChain } from "viem";
 
-export const celoSepolia = defineChain({
-  id: Number(process.env.NEXT_PUBLIC_CELO_CHAIN_ID ?? 11142220),
-  name: "Celo Sepolia",
+export const celo = defineChain({
+  id: Number(process.env.NEXT_PUBLIC_CELO_CHAIN_ID ?? 42220),
+  name: "Celo",
   nativeCurrency: {
     name: "Celo",
     symbol: "CELO",
@@ -10,19 +10,13 @@ export const celoSepolia = defineChain({
   },
   rpcUrls: {
     default: {
-      http: [
-        process.env.NEXT_PUBLIC_CELO_RPC_URL ??
-          "https://forno.celo-sepolia.celo-testnet.org",
-      ],
+      http: [process.env.NEXT_PUBLIC_CELO_RPC_URL ?? "https://forno.celo.org"],
     },
   },
   blockExplorers: {
     default: {
-      name: "Blockscout",
-      url:
-        process.env.NEXT_PUBLIC_CELO_EXPLORER ??
-        "https://celo-sepolia.blockscout.com",
+      name: "Celoscan",
+      url: process.env.NEXT_PUBLIC_CELO_EXPLORER ?? "https://celoscan.io",
     },
   },
-  testnet: true,
 });

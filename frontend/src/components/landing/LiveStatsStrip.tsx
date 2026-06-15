@@ -39,7 +39,7 @@ export function LiveStatsStrip() {
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent">
           <span aria-hidden className="absolute inset-0 animate-ping rounded-full bg-accent opacity-60" />
         </span>
-        Live on Celo Sepolia · onchain, not seeded
+        Live on Celo · onchain, not seeded
       </div>
 
       <h2 className="mt-4 text-2xl font-light tracking-tighter text-foreground sm:text-3xl">

@@ -22,7 +22,7 @@ export function DashboardSidebar() {
         <Image src="/vestra-mark.png" alt="Vestra" width={22} height={22} className="rounded-md" />
         <span className="text-[13px] font-medium text-foreground/95">Vestra</span>
         <span className="rounded-sm border border-white/[0.08] bg-white/[0.02] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
-          Sepolia
+          Celo
         </span>
       </div>
 

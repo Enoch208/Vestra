@@ -25,7 +25,7 @@ export function Header() {
             Vestra
           </span>
           <span className="hidden md:inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-muted">
-            Celo Sepolia
+            Celo
           </span>
         </Link>
 

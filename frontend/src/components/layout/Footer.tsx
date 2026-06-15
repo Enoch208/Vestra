@@ -16,7 +16,7 @@ const COLUMNS = [
   {
     title: "Build",
     items: [
-      { label: "Contracts · Sepolia", href: "https://github.com/Enoch208/Vestra" },
+      { label: "Contracts · Celo", href: "https://github.com/Enoch208/Vestra" },
       { label: "ERC-8004 registry", href: "https://8004scan.io" },
       { label: "Self Protocol", href: "https://self.xyz" },
       { label: "x402 payments", href: "https://x402.org" },
@@ -85,7 +85,7 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-2 font-mono text-[11px] text-muted">
           <LiveDot />
-          agent online · Celo Sepolia
+          agent online · Celo
         </div>
       </div>
     </footer>

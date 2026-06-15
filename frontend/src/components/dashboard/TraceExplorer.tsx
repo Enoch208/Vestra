@@ -59,7 +59,7 @@ export function TraceExplorer({ initialCid }: { initialCid?: string }) {
         <SectionHeading
           eyebrow="Credit explorer"
           title="Look up any saver's onchain record"
-          description="Enter a wallet address or user ID to inspect their savings history, streak, credit score, and reputation events on Celo Sepolia."
+          description="Enter a wallet address or user ID to inspect their savings history, streak, credit score, and reputation events on Celo."
         />
       </div>
 
@@ -114,7 +114,7 @@ export function TraceExplorer({ initialCid }: { initialCid?: string }) {
             <div className="space-y-1">
               <p className="text-[13px] text-foreground/90">No record found</p>
               <p className="font-mono text-[11px] text-muted">
-                {state.address.slice(0, 20)}… has no Vestra credit record on Sepolia.
+                {state.address.slice(0, 20)}… has no Vestra credit record on Celo.
               </p>
             </div>
           </div>

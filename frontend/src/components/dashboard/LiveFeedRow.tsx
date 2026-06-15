@@ -10,7 +10,7 @@ import type { SavingsEvent } from "@/data/mockData";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
 import { formatRelativeTime, shortenHex } from "@/lib/format";
 
-const EXPLORER_TX = "https://celo-sepolia.blockscout.com/tx";
+const EXPLORER_TX = "https://celoscan.io/tx";
 
 const TYPE_LABEL: Record<SavingsEvent["type"], string> = {
   CONTRIBUTION: "saved",

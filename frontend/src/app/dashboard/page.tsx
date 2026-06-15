@@ -10,7 +10,7 @@ export default function DashboardOverviewPage() {
         </h1>
         <p className="max-w-3xl text-[13px] leading-snug text-muted">
           Real contributions from Self-verified savers across emerging markets.
-          Every event is written to Celo Sepolia and feeds the ERC-8004 credit identity.
+          Every event is written to Celo and feeds the ERC-8004 credit identity.
         </p>
       </header>
       <CountersStrip />

@@ -113,7 +113,7 @@ function NavInner({ pathname }: { pathname: string }) {
             <span className="relative h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
           <div className="flex flex-col leading-tight">
-            <span className="text-[12px] text-foreground/90">Celo Sepolia</span>
+            <span className="text-[12px] text-foreground/90">Celo</span>
             <span className="font-mono text-[10px] text-muted">agent online</span>
           </div>
         </div>
@@ -130,7 +130,7 @@ function SidebarHeader({ onClose }: { onClose?: () => void }) {
         <span className="text-[14px] font-medium tracking-tight">Vestra</span>
       </Link>
       <span className="ml-auto rounded-sm border border-white/10 bg-white/[0.03] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-muted">
-        Sepolia
+        Celo
       </span>
       {onClose && (
         <button

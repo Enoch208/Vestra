@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createAppKit } from "@reown/appkit/react";
-import { celoSepolia } from "@/lib/web3/chains";
+import { celo } from "@/lib/web3/chains";
 import {
   reownProjectId,
   wagmiAdapter,
@@ -18,7 +18,7 @@ const queryClient = new QueryClient({
 if (typeof window !== "undefined" && reownProjectId) {
   createAppKit({
     adapters: [wagmiAdapter],
-    networks: [celoSepolia],
+    networks: [celo],
     projectId: reownProjectId,
     metadata: {
       name: "Vestra",

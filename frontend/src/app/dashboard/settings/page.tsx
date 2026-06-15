@@ -5,13 +5,13 @@ import { API_BASE, WS_URL } from "@/lib/api";
 
 export const metadata = { title: "Settings · Vestra" };
 
-const EXPLORER = "https://celo-sepolia.blockscout.com";
+const EXPLORER = "https://celoscan.io";
 
 const CONTRACTS = [
-  { label: "SavingsVault", address: "0xab871C4B7DB644f0c447319784662bF9b022811E" },
-  { label: "CreditModule", address: "0x4D7ba5c3a2184AA8979AEF251c49ee8bA30A80BB" },
-  { label: "cUSD (test)", address: "0x24eD128B46e54d3Cb20F33B5b872073f45E61454" },
-  { label: "ERC-8004 Reputation", address: "0x8004B663056A597Dffe9eCcC1965A193B7388713" },
+  { label: "SavingsVault", address: "0xf3c25dbd82FE887138B3a589455E4867740a4520" },
+  { label: "CreditModule", address: "0x24eD128B46e54d3Cb20F33B5b872073f45E61454" },
+  { label: "USDC", address: "0xcebA9300f2b948710d2653dD7B07f33A8B32118C" },
+  { label: "ERC-8004 Reputation", address: "0x8004BAa17C55a88189AE136b182e5fdA19dE9b63" },
 ];
 
 const RESOURCES = [
@@ -75,16 +75,16 @@ export default function SettingsPage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <span className="max-w-sm text-[13px] text-muted">
             Saved with Vestra? Vouch for the agent on the ERC-8004 Reputation
-            Registry — your feedback is recorded onchain to agentId {361}.
+            Registry — your feedback is recorded onchain to agentId {9387}.
           </span>
           <RateAgentButton />
         </div>
       </Card>
 
       <Card title="Network">
-        <Row label="Chain" value="Celo Sepolia" />
-        <Row label="Chain ID" value="11142220" />
-        <Row label="Explorer" value="celo-sepolia.blockscout.com" href={EXPLORER} />
+        <Row label="Chain" value="Celo" />
+        <Row label="Chain ID" value="42220" />
+        <Row label="Explorer" value="celoscan.io" href={EXPLORER} />
       </Card>
 
       <Card title="Contracts">

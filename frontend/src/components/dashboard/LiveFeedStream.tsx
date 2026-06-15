@@ -36,7 +36,7 @@ export function LiveFeedStream() {
         <SectionHeading
           eyebrow="Live savings feed"
           title="Real-time contributions"
-          description="Every contribution, repayment, and advance on Celo Sepolia."
+          description="Every contribution, repayment, and advance on Celo."
           live
           trailing={
             <span className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted md:inline-flex">

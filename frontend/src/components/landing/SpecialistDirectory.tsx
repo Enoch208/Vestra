@@ -30,7 +30,7 @@ export function SpecialistDirectory() {
         </div>
         <div className="flex items-center gap-3">
           <Pill mono>{SEED_USERS.length} verified</Pill>
-          <Pill tone="accent" mono>live on Sepolia</Pill>
+          <Pill tone="accent" mono>live on Celo</Pill>
         </div>
       </div>
 
