@@ -29,9 +29,8 @@ async function main() {
   ) as { agentId: string };
   const agentId = BigInt(dep.agentId);
 
-  const { uri, image, a2a } = await buildAndPinMetadata(jwt);
+  const { uri, image } = await buildAndPinMetadata(jwt);
   console.log(`image:    ${image}`);
-  console.log(`a2a card: ${a2a}`);
   console.log(`metadata: ${uri}`);
 
   const account = privateKeyToAccount(pk);

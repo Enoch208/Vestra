@@ -1,0 +1,38 @@
+{
+  "protocolVersion": "0.3.0",
+  "name": "Vestra",
+  "description": "Autonomous savings + credit agent on Celo. Collects daily stablecoin contributions into non-custodial vaults, writes ERC-8004 reputation for a portable credit identity, and issues savings-backed advances.",
+  "url": "https://vestra-six-self.vercel.app",
+  "preferredTransport": "JSONRPC",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "skills": [
+    {
+      "id": "daily-save",
+      "name": "Daily save",
+      "description": "Collect a user's committed daily stablecoin contribution into their non-custodial SavingsVault.",
+      "tags": ["savings", "celo", "usdc"]
+    },
+    {
+      "id": "credit-identity",
+      "name": "Credit identity",
+      "description": "Write each on-time contribution and repayment to the ERC-8004 Reputation Registry, building a portable onchain credit score.",
+      "tags": ["credit", "erc-8004", "reputation"]
+    },
+    {
+      "id": "savings-advance",
+      "name": "Savings-backed advance",
+      "description": "Offer and service a micro-advance fully collateralized by the user's savings.",
+      "tags": ["credit", "lending"]
+    }
+  ],
+  "provider": {
+    "organization": "Vestra",
+    "url": "https://vestra-six-self.vercel.app"
+  }
+}

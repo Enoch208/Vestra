@@ -30,23 +30,16 @@ async function pinJSON(content: object, name: string, jwt: string): Promise<stri
   return ((await res.json()) as { IpfsHash: string }).IpfsHash;
 }
 
-export async function buildAndPinMetadata(jwt: string): Promise<{ uri: string; image: string; a2a: string }> {
+export async function buildAndPinMetadata(jwt: string): Promise<{ uri: string; image: string }> {
   const logo = readFileSync(join(META_DIR, "vestra-logo.png"));
   const image = `${GATEWAY}/${await pinFile(new Uint8Array(logo), "vestra-logo.png", "vestra-agent-logo", jwt)}`;
 
-  const card = JSON.parse(readFileSync(join(META_DIR, "vestra-a2a-card.json"), "utf-8")) as object;
-  const a2a = `${GATEWAY}/${await pinJSON(card, "vestra-a2a-card", jwt)}`;
-
   const metadata = JSON.parse(readFileSync(join(META_DIR, "vestra-agent.json"), "utf-8")) as {
     image?: string;
-    services?: { name: string; endpoint: string; version?: string }[];
     [k: string]: unknown;
   };
   metadata.image = image;
-  for (const s of metadata.services ?? []) {
-    if (s.name === "A2A") s.endpoint = a2a;
-  }
 
   const uri = `ipfs://${await pinJSON(metadata, "vestra-agent-metadata", jwt)}`;
-  return { uri, image, a2a };
+  return { uri, image };
 }

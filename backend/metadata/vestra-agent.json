@@ -6,7 +6,7 @@
   "services": [
     {
       "name": "A2A",
-      "endpoint": "https://vestra.app/.well-known/agent-card.json",
+      "endpoint": "https://vestra-six-self.vercel.app/.well-known/agent-card.json",
       "version": "0.3.0"
     }
   ],
