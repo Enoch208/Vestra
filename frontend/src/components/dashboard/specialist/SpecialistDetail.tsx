@@ -46,7 +46,7 @@ export function SpecialistDetail({ name }: { name: string }) {
           saver &ldquo;{name}&rdquo; not found
         </p>
         <Link
-          href="/dashboard/savers"
+          href="/dashboard/specialists"
           className="mt-4 inline-flex cursor-pointer items-center gap-1.5 font-mono text-[11px] text-accent hover:text-foreground"
         >
           <ArrowLeft01Icon size={13} strokeWidth={1.5} />

@@ -23,7 +23,7 @@ type Props = {
 export function SpecialistCard({ user }: Props) {
   return (
     <Link
-      href={`/dashboard/savers/${user.id}`}
+      href={`/dashboard/specialists/${user.id}`}
       className="group relative flex cursor-pointer flex-col gap-4 rounded-xl border border-white/5 bg-[#0B0C0E] p-5 transition-all duration-200 ease-out hover:-translate-y-px hover:border-white/10 hover:bg-white/[0.015]"
     >
       <header className="flex items-start justify-between gap-3">

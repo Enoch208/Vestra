@@ -1,4 +1,11 @@
-import type { SavingsEvent, VestraSummary, VestraUser } from "@/data/mockData";
+import {
+  SEED_USERS,
+  RECENT_EVENTS,
+  VESTRA_SUMMARY,
+  type SavingsEvent,
+  type VestraSummary,
+  type VestraUser,
+} from "@/data/mockData";
 
 export const API_BASE =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
@@ -17,10 +24,13 @@ async function fetchJson<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  summary: () => fetchJson<VestraSummary>("/api/summary"),
-  users: () => fetchJson<VestraUser[]>("/api/users"),
+  summary: () =>
+    fetchJson<VestraSummary>("/api/summary").catch(() => VESTRA_SUMMARY),
+  users: () => fetchJson<VestraUser[]>("/api/users").catch(() => SEED_USERS),
   events: (limit = 30) =>
-    fetchJson<SavingsEvent[]>(`/api/events?limit=${limit}`),
+    fetchJson<SavingsEvent[]>(`/api/events?limit=${limit}`).catch(() =>
+      RECENT_EVENTS.slice(0, limit)
+    ),
 };
 
 export type WsMessage =

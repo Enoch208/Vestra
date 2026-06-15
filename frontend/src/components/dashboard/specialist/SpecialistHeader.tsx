@@ -12,7 +12,7 @@ export function SpecialistHeader({ user }: { user: VestraUser }) {
   return (
     <div>
       <Link
-        href="/dashboard/savers"
+        href="/dashboard/specialists"
         className="inline-flex cursor-pointer items-center gap-1.5 font-mono text-[11px] text-muted transition-colors hover:text-foreground"
       >
         <ArrowLeft01Icon size={13} strokeWidth={1.5} />
