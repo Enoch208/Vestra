@@ -12,7 +12,7 @@ try {
   process.loadEnvFile(join(__dirname, "../.env"));
 } catch {}
 
-const NETWORK: Network = "testnet";
+const NETWORK: Network = process.env.NETWORK === "mainnet" ? "mainnet" : "testnet";
 const LOOP = process.argv.includes("--loop");
 const POLL_MS = 60 * 60 * 1000;
 
