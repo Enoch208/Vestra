@@ -1,0 +1,10 @@
+{
+  "network": "mainnet",
+  "agentId": "9387",
+  "agentAddress": "0xb9D0cCbf899d2505D62d124649f24689A0F03D60",
+  "identityRegistry": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+  "reputationRegistry": "0x8004BAa17C55a88189AE136b182e5fdA19dE9b63",
+  "metadataUri": "ipfs://QmPGxAkWcyGr3uvqYxXX7PRLmjP736k1Nb6mLuho76A9hJ",
+  "txHash": "0xff9381a6c3afb31494ccbe6ed8e9e0ead55b1116afe0c6397ab3f1b70ae28af1",
+  "registeredAt": "2026-06-15T03:50:38.133Z"
+}

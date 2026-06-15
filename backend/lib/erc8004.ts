@@ -13,7 +13,7 @@ export const REPUTATION_REGISTRY: Record<Network, Hex> = {
 };
 
 export const VESTRA_AGENT_ID: Record<Network, bigint> = {
-  mainnet: 0n,
+  mainnet: 9387n,
   testnet: 361n,
 };
 

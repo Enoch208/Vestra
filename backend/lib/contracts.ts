@@ -9,9 +9,9 @@ export const CONTRACTS: Record<Network, { token: Hex; savingsVault: Hex; creditM
     creditModule: "0x4D7ba5c3a2184AA8979AEF251c49ee8bA30A80BB",
   },
   mainnet: {
-    token: "0x0000000000000000000000000000000000000000",
-    savingsVault: "0x0000000000000000000000000000000000000000",
-    creditModule: "0x0000000000000000000000000000000000000000",
+    token: "0xcebA9300f2b948710d2653dD7B07f33A8B32118C",
+    savingsVault: "0xf3c25dbd82FE887138B3a589455E4867740a4520",
+    creditModule: "0x24eD128B46e54d3Cb20F33B5b872073f45E61454",
   },
 };
 
@@ -22,5 +22,5 @@ export const RPC_URL: Record<Network, string> = {
 
 export const START_BLOCK: Record<Network, bigint> = {
   testnet: 28193000n,
-  mainnet: 0n,
+  mainnet: 69594000n,
 };
