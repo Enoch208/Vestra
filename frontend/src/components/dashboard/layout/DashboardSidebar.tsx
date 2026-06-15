@@ -5,9 +5,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   DashboardSquare01Icon,
+  PiggyBankIcon,
   UserGroupIcon,
   RankingIcon,
   ShieldKeyIcon,
+  CreditCardIcon,
   Search01Icon,
   BookOpen02Icon,
   Settings01Icon,
@@ -24,9 +26,11 @@ type NavItem = {
 
 const PRIMARY_NAV: NavItem[] = [
   { label: "Overview", href: "/dashboard", icon: DashboardSquare01Icon },
+  { label: "Start saving", href: "/dashboard/onboard", icon: PiggyBankIcon },
   { label: "Savers", href: "/dashboard/specialists", icon: UserGroupIcon },
   { label: "Leaderboard", href: "/dashboard/leaderboard", icon: RankingIcon },
   { label: "Credit identity", href: "/dashboard/atlas", icon: ShieldKeyIcon },
+  { label: "Advance", href: "/dashboard/advance", icon: CreditCardIcon },
   { label: "Record lookup", href: "/dashboard/trace", icon: Search01Icon },
 ];
 

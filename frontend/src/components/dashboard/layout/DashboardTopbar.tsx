@@ -14,9 +14,11 @@ import { useDashboardNav } from "@/lib/dashboard-nav";
 
 const ROUTE_LABELS: Record<string, string> = {
   "/dashboard": "Overview",
+  "/dashboard/onboard": "Start saving",
   "/dashboard/specialists": "Savers",
   "/dashboard/leaderboard": "Leaderboard",
   "/dashboard/atlas": "Credit identity",
+  "/dashboard/advance": "Advance",
   "/dashboard/trace": "Record lookup",
 };
 
