@@ -12,7 +12,8 @@
     "pull:loop": "tsx src/pull.ts --loop",
     "test:reputation": "tsx scripts/test-reputation.ts",
     "test:onboard": "tsx scripts/test-onboard.ts",
-    "smoke:mainnet": "tsx scripts/mainnet-smoke.ts"
+    "smoke:mainnet": "tsx scripts/mainnet-smoke.ts",
+    "bot": "tsx src/bot.ts"
   },
   "dependencies": {
     "viem": "^2.50.4"
