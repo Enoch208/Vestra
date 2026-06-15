@@ -1,0 +1,15 @@
+{
+  "chainId": 11142220,
+  "network": "celo-sepolia",
+  "deployer": "0xb9D0cCbf899d2505D62d124649f24689A0F03D60",
+  "contracts": {
+    "TestUSD": "0x24eD128B46e54d3Cb20F33B5b872073f45E61454",
+    "SavingsVault": "0xab871C4B7DB644f0c447319784662bF9b022811E",
+    "CreditModule": "0x4D7ba5c3a2184AA8979AEF251c49ee8bA30A80BB"
+  },
+  "erc8004": {
+    "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "reputationRegistry": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+    "agentId": "361"
+  }
+}
