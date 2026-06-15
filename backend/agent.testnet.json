@@ -1,0 +1,10 @@
+{
+  "network": "testnet",
+  "agentId": "361",
+  "agentAddress": "0xb9D0cCbf899d2505D62d124649f24689A0F03D60",
+  "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+  "reputationRegistry": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+  "metadataUri": "ipfs://QmX7uQMXMnqZjY3x6S8QDrkevDj7eywL2RUVeXwaESdNfA",
+  "txHash": "0x60ffd9c7d46a2cc8b7e9c740da5efb7119180aac3b70807077d2843719be1310",
+  "registeredAt": "2026-06-14T21:42:00.106Z"
+}

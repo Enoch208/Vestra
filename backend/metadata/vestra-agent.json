@@ -1,0 +1,18 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Vestra",
+  "description": "Autonomous savings + credit agent on Celo. Users save a small fixed amount daily into a non-custodial vault — the agent never holds principal. Every on-time contribution writes to the ERC-8004 Reputation Registry, building a portable onchain credit identity. Consistent savers unlock savings-collateralized micro-advances. Built for the 15M+ MiniPay users across emerging markets who already practice daily savings but have no credit history.",
+  "image": "https://vestra.app/logo.png",
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://vestra.app/.well-known/agent-card.json",
+      "version": "0.3.0"
+    }
+  ],
+  "x402Support": true,
+  "active": true,
+  "supportedTrust": ["reputation"],
+  "registrations": [],
+  "tags": ["savings", "credit", "identity", "minipay", "emerging-markets", "celo", "x402", "self-protocol"]
+}
