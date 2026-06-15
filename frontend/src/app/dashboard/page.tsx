@@ -1,5 +1,6 @@
 import { CountersStrip } from "@/components/dashboard/CountersStrip";
 import { LiveFeedStream } from "@/components/dashboard/LiveFeedStream";
+import { OnchainStatus } from "@/components/dashboard/OnchainStatus";
 
 export default function DashboardOverviewPage() {
   return (
@@ -13,6 +14,7 @@ export default function DashboardOverviewPage() {
           Every event is written to Celo and feeds the ERC-8004 credit identity.
         </p>
       </header>
+      <OnchainStatus />
       <CountersStrip />
       <LiveFeedStream />
     </div>
