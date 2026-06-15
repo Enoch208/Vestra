@@ -39,7 +39,7 @@ export function Hero() {
         <HeroIntroItem>
           <div className="mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <PrimaryButton
-              href="/dashboard"
+              href="/dashboard/onboard"
               trailing={<ArrowUpRight01Icon size={16} strokeWidth={2} />}
             >
               Start saving
