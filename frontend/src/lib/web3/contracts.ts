@@ -34,3 +34,12 @@ export const usdcAbi = parseAbi([
   "function allowance(address owner, address spender) view returns (uint256)",
   "function balanceOf(address) view returns (uint256)",
 ]);
+
+export const CREDIT_MODULE = "0x24eD128B46e54d3Cb20F33B5b872073f45E61454" as `0x${string}`;
+
+export const creditModuleAbi = parseAbi([
+  "function eligibleAmount(address user) view returns (uint256)",
+  "function requestAdvance(uint128 amount)",
+  "function repay(uint256 amount)",
+  "function advances(address) view returns (uint128 principal, uint128 outstanding, uint128 collateral, uint64 dueDate, uint8 status)",
+]);

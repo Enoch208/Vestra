@@ -32,6 +32,10 @@ const AGENT_URL =
 const chain = NETWORK === "mainnet" ? celo : celoSepolia;
 const client = createPublicClient({ chain, transport: http(RPC_URL[NETWORK]) });
 const repAbi = parseAbi(["function getClients(uint256) view returns (address[])"]);
+const creditAbi = parseAbi([
+  "function eligibleAmount(address) view returns (uint256)",
+  "function advances(address) view returns (uint128 principal, uint128 outstanding, uint128 collateral, uint64 dueDate, uint8 status)",
+]);
 const ACCOUNT_OPENED = parseAbiItem("event AccountOpened(address indexed user, uint64 dailyAmount)");
 
 const TOKEN = process.env.BOT_TOKEN;
@@ -89,11 +93,27 @@ async function creditFor(addr: Address): Promise<string> {
   ].join("\n");
 }
 
+async function borrowFor(addr: Address): Promise<string> {
+  const [eligible, adv] = await Promise.all([
+    client.readContract({ address: C.creditModule, abi: creditAbi, functionName: "eligibleAmount", args: [addr] }),
+    client.readContract({ address: C.creditModule, abi: creditAbi, functionName: "advances", args: [addr] }),
+  ]);
+  const lines = [
+    `*Advance* \`${addr.slice(0, 10)}…${addr.slice(-4)}\``,
+    ``,
+    `💳 Eligible to borrow: *${formatUnits(eligible, DEC)} ${SYMBOL}*`,
+  ];
+  if (Number(adv[4]) === 1) lines.push(`📌 Active advance — outstanding: *${formatUnits(adv[1], DEC)} ${SYMBOL}*`);
+  lines.push(``, `Borrow in the app → ${APP}/dashboard/advance`);
+  return lines.join("\n");
+}
+
 const HELP = [
   "*Vestra* — save small daily, build onchain credit on Celo.",
   "",
   "/agent — live stats for the Vestra agent",
   "/credit `<address>` — a wallet's savings + credit record",
+  "/borrow `<address>` — how much a wallet can borrow",
   "/save — start saving (opens the app)",
   "/help — this message",
 ].join("\n");
@@ -110,6 +130,10 @@ async function handle(message: { chat: { id: number }; text?: string }) {
       const arg = text.split(/\s+/)[1];
       if (arg && isAddress(arg)) await send(chatId, await creditFor(arg));
       else await send(chatId, "Usage: `/credit 0xYourWalletAddress`");
+    } else if (text.startsWith("/borrow")) {
+      const arg = text.split(/\s+/)[1];
+      if (arg && isAddress(arg)) await send(chatId, await borrowFor(arg));
+      else await send(chatId, "Usage: `/borrow 0xYourWalletAddress`");
     } else if (text.startsWith("/save")) {
       await send(chatId, `Open Vestra and start saving:\n${APP}/dashboard/onboard`);
     } else if (text.startsWith("/help")) {
