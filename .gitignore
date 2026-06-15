@@ -1,0 +1,9 @@
+Vestra_PRD.md
+CLAUDE.md
+AGENTS.md
+.claude/
+
+.DS_Store
+.env*
+
+node_modules/
