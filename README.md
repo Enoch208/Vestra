@@ -14,7 +14,7 @@
 
 Vestra is an **autonomous savings + credit agent on Celo**. Users commit to a tiny daily save (from $0.10); the agent collects it from a **non‑custodial** vault — it can never touch the principal — writes every on‑time contribution to the **ERC‑8004 Reputation Registry**, and turns that history into a **portable onchain credit identity** that unlocks **savings‑backed advances**. Built for the **15M+ MiniPay users** across emerging markets who already practice daily saving but have no credit record.
 
-**[ Live app ↗ ](https://vestra-six-self.vercel.app)** &nbsp;·&nbsp; **[ Agent on 8004scan ↗ ](https://8004scan.io/agents/celo/9387)** &nbsp;·&nbsp; **[ SavingsVault on Celoscan ↗ ](https://celoscan.io/address/0xf3c25dbd82FE887138B3a589455E4867740a4520)**
+**[ Live app ↗ ](https://vestra-six-self.vercel.app)** &nbsp;·&nbsp; **[ Agent on 8004scan ↗ ](https://8004scan.io/agents/celo/9387)** &nbsp;·&nbsp; **[ Thread on X ↗ ](https://x.com/dreyethh/status/2066437203580850534)** &nbsp;·&nbsp; **[ Celoscan ↗ ](https://celoscan.io/address/0xf3c25dbd82FE887138B3a589455E4867740a4520)**
 
 </div>
 
