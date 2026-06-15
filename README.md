@@ -20,8 +20,17 @@ Vestra is an **autonomous savings + credit agent on Celo**. Users commit to a ti
 
 ---
 
+## ▶ Demo
+
+https://github.com/user-attachments/assets/ccb0014a-8c20-403a-a332-303e51d5f125
+
+> A short walkthrough — a real user onboards on Celo mainnet, the agent collects a live USDC save, writes it to ERC‑8004 as credit, and a savings‑backed advance unlocks. Every transaction is verifiable onchain.
+
+---
+
 ## Table of contents
 
+- [Demo](#-demo)
 - [The problem](#the-problem)
 - [What I built](#what-i-built)
 - [Architecture](#architecture)
@@ -136,6 +145,7 @@ The interesting work was making *"an agent pulls money from your wallet every da
 - **Idempotent collection.** The agent `simulateContract`s each pull first (closed windows are skipped for free, no gas), and the contract's window guard means a re-run can never double-charge — so the loop is safe to run on any cadence or retry.
 - **Load-balanced RPC lag is real.** `forno` round-robins nodes, so a read right after a write can hit a node that hasn't seen the block. Every write path waits for confirmations, polls until state is visible, and pins critical reads to the write's block number — caught and handled, not hoped around.
 - **Metadata that actually renders and validates.** 8004scan puts the agent image straight into `og:image`, and browsers can't load `ipfs://` — so the metadata serves the logo over an HTTPS gateway, declares a real **A2A service card on the live domain** at `/.well-known/agent-card.json`, and uses the spec `services` schema (not the deprecated `endpoints`), clearing the registry's validation warning.
+- **An agent-callable MCP server — not just a card.** Beyond A2A, Vestra runs a live **Model Context Protocol** server at `/api/mcp` with four tools — `get_agent_stats`, `get_credit_record`, `get_borrow_eligibility`, `list_contracts` — that **execute against live mainnet** (a `tools/call` returns the agent's real on-chain numbers, not a cached blob). So any other agent can query a saver's credit or the agent's stats programmatically. The full ERC-8004 service profile is declared on agent #9387 across **five protocols — MCP · A2A · Web · Email · DID** — and the live ones health-check on 8004scan.
 
 ## Sybil resistance & honest activity
 
