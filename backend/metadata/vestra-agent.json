@@ -5,9 +5,26 @@
   "image": "https://vestra.app/logo.png",
   "services": [
     {
+      "name": "MCP",
+      "endpoint": "https://vestra-six-self.vercel.app/api/mcp",
+      "version": "2025-06-18"
+    },
+    {
       "name": "A2A",
       "endpoint": "https://vestra-six-self.vercel.app/.well-known/agent-card.json",
       "version": "0.3.0"
+    },
+    {
+      "name": "Web",
+      "endpoint": "https://vestra-six-self.vercel.app"
+    },
+    {
+      "name": "Email",
+      "endpoint": "mailto:enochid200@gmail.com"
+    },
+    {
+      "name": "DID",
+      "endpoint": "did:pkh:eip155:42220:0xb9D0cCbf899d2505D62d124649f24689A0F03D60"
     }
   ],
   "x402Support": true,
